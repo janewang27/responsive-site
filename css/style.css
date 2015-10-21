@@ -1,0 +1,37 @@
+.box {
+	width: 80%;
+	height: 200px;
+	background-color: #00ffff;
+	margin-bottom: 20px;
+	font-size: 40px;
+}
+
+.show-desktop {
+	display: block;
+}
+
+.show-mobile {
+	display: none;
+}
+
+@media (max-width: 600px) {
+	.show-desktop {
+		display: none;
+	}
+
+	.show-mobile {
+		display: block;
+	}
+
+	body {
+		background-color: #c1c5c5;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+	body {
+		background-color: #c1c5c5;
+	}
+}
+
+
