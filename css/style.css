@@ -1,14 +1,110 @@
+/* code as seen here: http://codepen.io/bradfrost/pen/sHvaz by brad frost */
+
+.header {
+	text-align: center;
+	font-size: 260%;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+body { 
+	font-size: 16px;
+	font-family: georgia;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+	padding-left: 10px;
+	text-align: center;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	padding: 3px 3px 3px 3px;
+	background-color: black;
+	color: white;
+}
+
+.nav {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.quote {
+	margin-top: 40px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 130%;
+}
+
 img {
+	margin-left: 10px;
 }
 
 /*larger than mobile */
-@media (min-width: 400px) and (max-width: 500px) {
-	width: 100%;
-	float: none;
-	margin: auto;
-}
+@media (min-width: 400px) {
 
-/*larger than tablet */
-@media (min-width: 750px) {
+		html {
+			font-size: 90%;
+		}
 
+		a.menu-link {
+  	    float: right;
+		    display: block;
+		    padding: 1em;
+		}
+		nav[role=navigation] {
+			clear: both;
+			-webkit-transition: all 0.3s ease-out;  
+			-moz-transition: all 0.3s ease-out;
+			-ms-transition: all 0.3s ease-out;
+			-o-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+		.js nav[role=navigation] {
+			overflow: hidden;
+			max-height: 0;
+		}
+		nav[role=navigation].active {
+			max-height: 15em;
+		}
+		nav[role=navigation] ul {
+			margin: 0;
+			padding: 0;
+			border-top: 1px solid #808080;
+		}
+		nav[role=navigation] li a {
+			display: block;
+			padding: 0.8em;
+			border-bottom: 1px solid #808080;
+		}
+		
+		@media screen and (min-width: 48.25em) {
+			a.menu-link {
+			   display: none;
+			}
+			.js nav[role=navigation] {
+				max-height: none;
+			}
+			nav[role=navigation] ul {
+				margin: 0 0 0 -0.25em;
+				border: 0;
+			}
+			
+			nav[role=navigation]  li {
+				display: inline-block;
+				margin: 0 0.25em;
+			}
+			nav[role=navigation] li a {
+				border: 0;
+			}
+		}	
 }
